@@ -1,6 +1,6 @@
-import mongoose from "mongoose"
-import {User} from "../Models"
-import {responseHandler} from "../utils"
+const mongoose =  require("mongoose")
+const {User} = require("../Models")
+const {responseHandler} = require("../utils")
 
 
 const addUser = async (req,res) => {
@@ -14,10 +14,10 @@ const addUser = async (req,res) => {
     let savedUser = await newUser.save()
     if(savedUser)
         return responseHandler.send(res, "json", "", savedUser)
-    return responseHandler.send(res, "invalid", "Entry already exists")
+    return responseHandler.send(res, "invalid", "Server Error")
 }
 
 
-export default {
+module.exports = {
     addUser
 }
