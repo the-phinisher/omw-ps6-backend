@@ -1,8 +1,8 @@
 require("dotenv").config()
-import bodyParser from "body-parser"
-import express from "express"
-import config from "./config"
-import apiRouter from "./Routers/apiRouter"
+const bodyParser = require("body-parser")
+const express = require("express")
+const config = require("./config")
+const apiRouter = require("./Routers")
 const app = express()
 
 app.use(bodyParser.urlencoded({ extended: true }))

@@ -1,4 +1,4 @@
-import { Schema, model } from "mongoose"
+const { Schema, model } = require("mongoose")
 
 const questionSchema = new Schema({
 	category: String,
@@ -6,4 +6,6 @@ const questionSchema = new Schema({
 	answer: String,
 })
 
-export const Question = model("Question", questionSchema)
+const Question = model("Question", questionSchema)
+
+module.exports = Question
