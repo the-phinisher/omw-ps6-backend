@@ -1,4 +1,4 @@
-import { User } from "./user.js"
-import { Question } from "./question.js"
+const { User } = require("./user.js")
+const { Question } = require("./question.js")
 
-export default { User, Question }
+module.exports = { User, Question }

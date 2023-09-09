@@ -7,4 +7,4 @@ const send = (res, type = "invalid", content = "", obj = {}) => {
 	return res.end(content)
 }
 
-export default { send }
+module.exports = { send }
